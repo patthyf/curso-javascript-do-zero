@@ -5,20 +5,22 @@
   <title>Curso Javascript</title>
 
   <script>
-    function showInfo() {
-      console.log('Hello World');
-    }
+    function digitacao() {
+      // var input = document.getElementById('nome');
+      // var input = document.getElementsByTagName('input')[0];
+      // var input = document.getElementsByClassName('nome')[0];
+      // var input = document.querySelector('input[name=nome]');
+      // var input = document.querySelector('.nome');
+      // var input = document.querySelector('#nome');
+      var input = document.querySelector('.input-box input');
 
-    function hover() {
-      console.log('Mouse por cima');
-    }
-
-    function digitacao(e) {
-      console.log(e);
+      console.log('Texto digitado: ' + input.value);
     }
   </script>
 </head>
 <body>
-  <button onclick="showInfo()" onmouseover="hover()">Mostra</button>
+  <div class="input-box">
+    <input name="nome" id="nome" class="nome" onkeyup="digitacao()">
+  </div>
 </body>
 </html>
