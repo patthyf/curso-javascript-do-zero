@@ -6,39 +6,12 @@
 
   <script>
     function retornaSexo(sexo) {
-      // if (sexo == 'M' && idade >= 18) {
-      //   return 'Você é homem';
-      // } else if (sexo == 'M' && idade < 18) {
-      //   return 'Você é menino';
-      // }
+      var sexoDesc = (sexo == 'M') ? 'Masculino' : 'Feminino';
 
-      // var tipo = '';
-
-      // if (sexo == 'M') {
-      //   if (idade >= 18) {
-      //     tipo = 'homem';
-      //   } else {
-      //     tipo = 'menino';
-      //   }
-      // } else {
-      //   if (idade >= 18) {
-      //     tipo = 'mulher';
-      //   } else {
-      //     tipo = 'menina';
-      //   }
-      // }
-
-      // return 'Você é ' + tipo;
-
-      // if (sexo == 'M') {
-      //   return 'Mulher';
-      // }
-
-      return sexo == 'F';
+      return sexoDesc;
     }
 
-    var sexo = 'F';
-    var idade = 20;
+    var sexo = 'M';
 
     console.log(retornaSexo(sexo));
   </script>
