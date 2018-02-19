@@ -5,20 +5,20 @@
   <title>Curso Javascript</title>
 
   <script>
-    // for (var i = 1; i <= 100; i++) {
-    //   console.log(i);
-    // }
+    function showInfo() {
+      console.log('Hello World');
+    }
 
-    var numero = 7264;
+    function hover() {
+      console.log('Mouse por cima');
+    }
 
-    while (numero > 100) {
-      numero /= 2;
-
-      console.log(numero);
+    function digitacao(e) {
+      console.log(e);
     }
   </script>
 </head>
 <body>
-  
+  <button onclick="showInfo()" onmouseover="hover()">Mostra</button>
 </body>
 </html>
