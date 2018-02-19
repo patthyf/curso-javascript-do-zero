@@ -1,49 +1,14 @@
-var todos = [
-  'Fazer café',
-  'Estudar Javascript',
-  'Acessar comunidade da Rocketseat'
-];
+var xhr = new XMLHttpRequest();
 
-var list = document.querySelector('ul.todos');
-var input = document.querySelector('input.add');
-var button = document.querySelector('button');
+xhr.open('GET', 'https://api.github.com/users/diego3g');
+xhr.send(null);
 
-// Renderizar todos em tela
-function renderTodos() {
-  list.innerHTML = "";
-
-  for (key in todos) {
-    var todo = document.createElement('li');
-    var todoText = document.createTextNode(todos[key]);
-
-    var deleteLink = document.createElement('a');
-    deleteLink.setAttribute('href', '#');
-    deleteLink.setAttribute('onclick', 'handleDelete('+ key +')');
-    
-    var linkText = document.createTextNode('Excluir');
-    deleteLink.appendChild(linkText);
-  
-    todo.appendChild(todoText);
-    todo.appendChild(deleteLink);
-  
-    list.appendChild(todo);
+xhr.onreadystatechange = function() {
+  if (xhr.readyState === xhr.DONE) {
+    if (xhr.status === 200) {
+      console.log(JSON.parse(xhr.responseText));
+    } else {
+      console.log('Erro ao fazer chamada!');
+    }
   }
-};
-
-renderTodos();
-
-// Ouve click no botão
-button.onclick = function() {
-  var text = input.value;
-
-  todos.push(text);
-  input.value = '';
-  renderTodos();
-};
-
-function handleDelete(key) {
-  event.preventDefault();
-
-  todos.splice(key, 1);
-  renderTodos();
 }
