@@ -6,26 +6,16 @@
 </head>
 <body>
   <div class="input-box">
-    <input type="text" name="1" />
-    <input type="text" name="2" />
-    <input type="text" name="3" />
-    <input type="text" name="4" />
+    <a href="#" class="link" title="Um link">Meu link</a>
   </div>
 
   <script>
-    // var link = document.createElement('a');
-    // var text = document.createTextNode('Acessar Google');
+    var link = document.querySelector('.link');
 
-    // link.href = 'http://google.com.br';
+    link.setAttribute('href', 'http://www.google.com.br');
+    link.removeAttribute('title');
 
-    // link.appendChild(text);
-
-    // document.querySelector('.input-box').appendChild(link);
-
-    var input = document.querySelector('input[name="3"]');
-    var list = document.querySelector('div.input-box');
-
-    list.removeChild(input);
+    link.style.color = '#f00';
   </script>
 </body>
 </html>
