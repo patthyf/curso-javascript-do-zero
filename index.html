@@ -4,18 +4,16 @@
   <meta charset="UTF-8">
   <title>Curso Javascript</title>
 </head>
+
+<script>
+  setInterval(function() {
+    console.log('Hello');
+  }, 500);
+
+  setTimeout(function() {
+    console.log('Intervalo');
+  }, 2000);
+</script>
 <body>
-  <div class="input-box">
-    <a href="#" class="link" title="Um link">Meu link</a>
-  </div>
-
-  <script>
-    var link = document.querySelector('.link');
-
-    link.setAttribute('href', 'http://www.google.com.br');
-    link.removeAttribute('title');
-
-    link.style.color = '#f00';
-  </script>
 </body>
 </html>
