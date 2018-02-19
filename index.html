@@ -3,24 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <title>Curso Javascript</title>
-
-  <script>
-    function digitacao() {
-      // var input = document.getElementById('nome');
-      // var input = document.getElementsByTagName('input')[0];
-      // var input = document.getElementsByClassName('nome')[0];
-      // var input = document.querySelector('input[name=nome]');
-      // var input = document.querySelector('.nome');
-      // var input = document.querySelector('#nome');
-      var input = document.querySelector('.input-box input');
-
-      console.log('Texto digitado: ' + input.value);
-    }
-  </script>
 </head>
 <body>
   <div class="input-box">
-    <input name="nome" id="nome" class="nome" onkeyup="digitacao()">
+    <input type="text" name="1" />
+    <input type="text" name="2" />
+    <input type="text" name="3" />
+    <input type="text" name="4" />
   </div>
+
+  <script>
+    // var link = document.createElement('a');
+    // var text = document.createTextNode('Acessar Google');
+
+    // link.href = 'http://google.com.br';
+
+    // link.appendChild(text);
+
+    // document.querySelector('.input-box').appendChild(link);
+
+    var input = document.querySelector('input[name="3"]');
+    var list = document.querySelector('div.input-box');
+
+    list.removeChild(input);
+  </script>
 </body>
 </html>
