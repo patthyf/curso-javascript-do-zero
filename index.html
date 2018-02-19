@@ -5,15 +5,20 @@
   <title>Curso Javascript</title>
 
   <script>
-    function soma(x, y) {
-      return x + y;
+    function retornaSexo(sexo) {
+      switch (sexo) {
+        case 'M':
+          return 'Masculino';
+        case 'F':
+          return 'Feminino';
+        default:
+          return 'Outro';
+      }
     }
 
-    var x = 10, y = 5;
+    var sexo = 'M';
 
-    var resultado = soma(x, y);
-
-    console.log(resultado);
+    console.log(retornaSexo(sexo));
   </script>
 </head>
 <body>
