@@ -49,7 +49,7 @@ _Dica: para verificar se um vetor contém um valor, utilize o método [indexOf](
 
 ## 4º exercício
 
-Utilizando ```switch``` escreva uma função que dado um total de anos de estudo retorna o quão experiente o usuário é:
+Escreva uma função que dado um total de anos de estudo retorna o quão experiente o usuário é:
 
 ```js
 function experiencia(anos) {
